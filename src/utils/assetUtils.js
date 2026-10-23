@@ -2,6 +2,12 @@ export function getAssetUrl(path) {
   if (!path) return '';
   if (path.startsWith('http://') || path.startsWith('https://') || path.startsWith('data:')) return path;
   const base = import.meta.env.BASE_URL || '/';
+  
+  // Guard against duplicate prefixing (e.g. if rewritten at build time by Vite plugin)
+  if (base !== '/' && path.startsWith(base)) {
+    return path;
+  }
+  
   const cleanPath = path.startsWith('/') ? path.slice(1) : path;
   const cleanBase = base.endsWith('/') ? base : `${base}/`;
   return `${cleanBase}${cleanPath}`;
