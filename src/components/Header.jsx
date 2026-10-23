@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu as MenuIcon, X, MapPin, ChevronDown, Phone, Calendar, ShoppingBag, Flame } from 'lucide-react';
 import { LOCATIONS } from '../data/locations';
 import { useCart } from '../context/CartContext';
+import { getAssetUrl } from '../utils/assetUtils';
 
 export default function Header({ selectedLocation, onSelectLocation }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,7 +43,7 @@ export default function Header({ selectedLocation, onSelectLocation }) {
           <Link to="/" className="flex items-center group">
             <div className="h-11 sm:h-12 md:h-14 flex items-center transition-transform duration-300 group-hover:scale-105">
               <img
-                src="/brand/MIC-Logo-New-v2.svg"
+                src={getAssetUrl('/brand/MIC-Logo-New-v2.svg')}
                 alt="Mughlai Indian Cuisine"
                 className="h-full w-auto object-contain drop-shadow"
               />
@@ -145,7 +146,7 @@ export default function Header({ selectedLocation, onSelectLocation }) {
               className="inline-flex items-center gap-2 text-[13px] font-bold text-white bg-gradient-to-r from-mughlai-red via-mughlai-ruby to-mughlai-flame hover:brightness-110 px-[18px] py-[8.5px] rounded-xl shadow-lg shadow-mughlai-red/30 transition transform hover:-translate-y-0.5 active:scale-95"
             >
               <img 
-                src="/images/Menu_icon.svg" 
+                src={getAssetUrl('/images/Menu_icon.svg')} 
                 alt="" 
                 className="w-4 h-4 object-contain shrink-0" 
               />
@@ -189,7 +190,7 @@ export default function Header({ selectedLocation, onSelectLocation }) {
               onClick={() => navigate('/menu')}
               className="text-xs font-bold bg-gradient-to-r from-mughlai-red to-mughlai-flame text-white px-3 py-1.5 rounded-lg shadow-md active:scale-95 flex items-center gap-1.5"
             >
-              <img src="/images/Menu_icon.svg" alt="" className="w-3.5 h-3.5 object-contain shrink-0" />
+              <img src={getAssetUrl('/images/Menu_icon.svg')} alt="" className="w-3.5 h-3.5 object-contain shrink-0" />
               <span>Order Online</span>
             </button>
             <button
@@ -306,7 +307,7 @@ export default function Header({ selectedLocation, onSelectLocation }) {
               onClick={() => setMobileMenuOpen(false)}
               className="w-full text-center py-2.5 rounded-lg bg-gradient-to-r from-mughlai-red to-mughlai-flame text-white font-bold text-xs shadow-md flex items-center justify-center gap-1.5"
             >
-              <img src="/images/Menu_icon.svg" alt="" className="w-3.5 h-3.5 object-contain shrink-0" />
+              <img src={getAssetUrl('/images/Menu_icon.svg')} alt="" className="w-3.5 h-3.5 object-contain shrink-0" />
               <span>Order Online</span>
             </Link>
           </div>

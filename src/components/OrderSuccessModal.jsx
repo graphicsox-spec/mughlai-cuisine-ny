@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { preventOrphans } from '../utils/textUtils';
+import { getAssetUrl } from '../utils/assetUtils';
 
 export default function OrderSuccessModal() {
   const { isReceiptOpen, closeReceipt, lastOrder } = useCart();
@@ -92,7 +93,7 @@ export default function OrderSuccessModal() {
 
           <div className="flex items-center justify-center mb-3">
             <img
-              src="/brand/MIC-Logo-New-v2.svg"
+              src={getAssetUrl('/brand/MIC-Logo-New-v2.svg')}
               alt="Mughlai Indian Cuisine"
               className="h-8 sm:h-9 w-auto object-contain drop-shadow"
             />

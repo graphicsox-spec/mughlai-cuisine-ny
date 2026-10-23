@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ShieldCheck, Mail, Phone, Flame, Calendar } from 'lucide-react';
 import { BRAND_INFO } from '../data/locations';
 import { preventOrphans } from '../utils/textUtils';
+import { getAssetUrl } from '../utils/assetUtils';
 
 export default function Footer() {
   return (
@@ -20,7 +21,7 @@ export default function Footer() {
             <Link to="/" className="inline-block group">
               <div className="h-12 sm:h-14 flex items-center transition-transform duration-300 group-hover:scale-105">
                 <img
-                  src="/brand/MIC-Logo-New-v2.svg"
+                  src={getAssetUrl('/brand/MIC-Logo-New-v2.svg')}
                   alt="Mughlai Indian Cuisine"
                   className="h-full w-auto object-contain drop-shadow"
                 />

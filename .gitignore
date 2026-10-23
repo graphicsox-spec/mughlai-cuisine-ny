@@ -41,11 +41,16 @@ desktop.ini
 Mughlai_Cuisine_NY_Audit_and_Package_Proposal_V3.md
 *.proposal.md
 
-# Raw Design, Print & Heavy Non-Web Source Files
-Brand/
+# Raw Design, Print & Heavy Non-Web Source Files (Root directories only)
+/Brand/
 *.ai
-Mughlai Indian Cuisine Menu (2026)/
+/Mughlai Indian Cuisine Menu (2026)/
 outside_sign_rendered.png
+
+# Ensure web assets in public/brand are tracked
+!public/brand/
+!public/brand/*.svg
+!public/favicon.svg
 
 # Gemini / Antigravity Agent internals
 .gemini/

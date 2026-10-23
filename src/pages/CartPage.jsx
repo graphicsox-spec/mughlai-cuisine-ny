@@ -37,6 +37,7 @@ import {
 import { useCart } from '../context/CartContext';
 import { LOCATIONS } from '../data/locations';
 import { preventOrphans } from '../utils/textUtils';
+import { getAssetUrl } from '../utils/assetUtils';
 import CustomSelect from '../components/CustomSelect';
 import { FULL_MENU } from '../data/fullMenu';
 
@@ -379,7 +380,7 @@ export default function CartPage() {
             <div className="bg-gradient-to-r from-mughlai-maroon via-mughlai-red to-[#1A0508] p-6 sm:p-8 text-center border-b border-mughlai-gold/30 relative">
               <div className="flex items-center justify-center mb-4">
                 <img
-                  src="/brand/MIC-Logo-New-v2.svg"
+                  src={getAssetUrl('/brand/MIC-Logo-New-v2.svg')}
                   alt="Mughlai Indian Cuisine"
                   className="h-10 sm:h-12 w-auto object-contain drop-shadow"
                 />
