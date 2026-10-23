@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* Proxima Nova Font Definitions */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/ProximaNova-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/ProximaNova-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/ProximaNova-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'proxima-nova';
+  src: url('/fonts/ProximaNova-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'proxima-nova';
+  src: url('/fonts/ProximaNova-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'proxima-nova';
+  src: url('/fonts/ProximaNova-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Swiss-721 Fallback */
+@font-face {
+  font-family: 'Swiss-721';
+  src: url('/fonts/Swiss-721.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Headings: Alice in Title Case with standard letter spacing (No ALL CAPS) */
+h1, h2, .font-display, .heading-playfair, .heading-alice {
+  font-family: 'Alice', 'Playfair Display', Georgia, serif;
+  letter-spacing: normal;
+  text-transform: none;
+  text-wrap: balance;
+  hyphens: manual;
+}
+
+/* Menu Navigation, Descriptions & Sub-Headings: Proxima Nova */
+h3, h4, h5, h6,
+.subheading-swiss,
+.font-swiss,
+.font-proxima,
+nav,
+.menu-nav,
+.category-pill,
+.filter-pill,
+p,
+.paragraph-balanced,
+.desc-swiss {
+  font-family: "Proxima Nova", "proxima-nova", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  text-transform: none;
+  word-spacing: normal;
+  letter-spacing: normal;
+}
+
+p, .paragraph-balanced, .desc-swiss {
+  word-spacing: normal;
+  letter-spacing: normal;
+}
+
+/* Luxury Royal Gold Gradient Text */
+.gold-text {
+  background: linear-gradient(135deg, #FFF1C5 0%, #D4AF37 50%, #AA8222 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border {
+  border-color: rgba(212, 175, 55, 0.35);
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+}
+
+.flame-glow {
+  box-shadow: 0 0 30px rgba(252, 75, 23, 0.25);
+}
+
+/* Subtle Mughlai Jali Pattern */
+.jali-pattern {
+  background-color: #121212;
+  background-image: radial-gradient(rgba(212, 175, 55, 0.08) 1px, transparent 1px),
+                    radial-gradient(rgba(140, 35, 28, 0.08) 1px, #121212 1px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+}
+
+/* Glassmorphism */
+.glass-header {
+  background: rgba(18, 18, 18, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.glass-card {
+  background: rgba(26, 24, 24, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+::-webkit-scrollbar-thumb {
+  background: #332B2B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8C231C;
+}

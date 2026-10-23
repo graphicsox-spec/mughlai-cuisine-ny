@@ -1,0 +1,51 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Production Build Output
+dist/
+dist-ssr/
+build/
+*.local
+
+# Environment variables & secrets (CRITICAL FOR SECURITY)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials/
+secrets/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Editor & OS files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Internal Business & Audit Proposals (NOT for public repo)
+Mughlai_Cuisine_NY_Audit_and_Package_Proposal_V3.md
+*.proposal.md
+
+# Raw Design, Print & Heavy Non-Web Source Files
+Brand/
+*.ai
+Mughlai Indian Cuisine Menu (2026)/
+outside_sign_rendered.png
+
+# Gemini / Antigravity Agent internals
+.gemini/
