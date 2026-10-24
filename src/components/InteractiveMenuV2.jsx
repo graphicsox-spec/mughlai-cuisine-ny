@@ -234,11 +234,17 @@ export default function InteractiveMenuV2() {
   }, [activeCategory, dietaryFilter, appliedSearch, searchQuery, sortBy]);
 
   return (
-    <section className="bg-[#0E0C0C] min-h-screen text-[#F5EFEB] py-8 sm:py-12 font-proxima relative selection:bg-mughlai-red selection:text-white">
+    <section className="bg-[#0E0C0C] min-h-screen text-[#F5EFEB] py-8 sm:py-12 font-proxima relative selection:bg-mughlai-red selection:text-white [isolation:isolate]">
       
-      {/* Subtle Ambient Backlights */}
-      <div className="absolute top-10 left-1/4 w-96 h-96 bg-mughlai-maroon/15 blur-3xl pointer-events-none rounded-full" />
-      <div className="absolute top-64 right-10 w-96 h-96 bg-[#EAA938]/5 blur-3xl pointer-events-none rounded-full" />
+      {/* Subtle Ambient Backlights - Zero-cost Radial Gradient */}
+      <div 
+        className="absolute top-10 left-1/4 w-96 h-96 pointer-events-none rounded-full"
+        style={{ background: 'radial-gradient(circle, rgba(74, 14, 23, 0.18) 0%, transparent 70%)' }}
+      />
+      <div 
+        className="absolute top-64 right-10 w-96 h-96 pointer-events-none rounded-full"
+        style={{ background: 'radial-gradient(circle, rgba(234, 169, 56, 0.08) 0%, transparent 70%)' }}
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
 

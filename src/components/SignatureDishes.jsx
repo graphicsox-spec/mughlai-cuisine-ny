@@ -106,11 +106,17 @@ export default function SignatureDishes() {
       : FEATURED_ITEMS.filter(item => !item.category.includes('Vegetarian') && !item.category.includes('Dessert'));
 
   return (
-    <section id="signature-dishes" className="py-20 bg-[#121212] relative border-b border-mughlai-border">
+    <section id="signature-dishes" className="py-20 bg-[#121212] relative border-b border-mughlai-border [isolation:isolate]">
       
-      {/* Background Ambience */}
-      <div className="absolute top-1/2 left-0 w-80 h-80 bg-mughlai-maroon/20 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-mughlai-gold/10 blur-3xl pointer-events-none" />
+      {/* Background Ambience - Zero-cost Radial Gradient instead of heavy blur filter */}
+      <div 
+        className="absolute top-1/2 left-0 w-80 h-80 pointer-events-none"
+        style={{ background: 'radial-gradient(circle, rgba(74, 14, 23, 0.25) 0%, transparent 70%)' }}
+      />
+      <div 
+        className="absolute bottom-0 right-0 w-80 h-80 pointer-events-none"
+        style={{ background: 'radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, transparent 70%)' }}
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -172,7 +178,7 @@ export default function SignatureDishes() {
               className="group bg-[#1A1818] rounded-2xl overflow-hidden border border-white/10 hover:border-mughlai-gold/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-mughlai-red/20 flex flex-col justify-between"
             >
               {/* Dish Image Container */}
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-black">
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#181515] transform-gpu">
                 <img
                   src={dish.image}
                   alt={dish.name}
@@ -185,7 +191,7 @@ export default function SignatureDishes() {
 
                 {/* Badge */}
                 <div className="absolute top-3 left-3">
-                  <span className="bg-black/75 backdrop-blur-md border border-mughlai-gold/40 text-mughlai-goldLight text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow font-swiss">
+                  <span className="bg-black/85 border border-mughlai-gold/40 text-mughlai-goldLight text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow font-swiss">
                     {dish.badge}
                   </span>
                 </div>

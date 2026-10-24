@@ -7,9 +7,12 @@ import { getAssetUrl } from '../utils/assetUtils';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0D0B0B] text-gray-300 pt-16 pb-12 border-t border-mughlai-red/40 relative overflow-hidden font-swiss">
+    <footer className="bg-[#0D0B0B] text-gray-300 pt-16 pb-12 border-t border-mughlai-red/40 relative overflow-hidden font-swiss [isolation:isolate]">
       {/* Decorative ambient background glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-28 bg-gradient-to-b from-mughlai-red/20 via-mughlai-maroon/10 to-transparent blur-3xl pointer-events-none" />
+      <div 
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-28 pointer-events-none"
+        style={{ background: 'radial-gradient(ellipse at top, rgba(140, 35, 28, 0.22) 0%, transparent 70%)' }}
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         

@@ -23,8 +23,11 @@ export default function HomePage({
       <SignatureDishes />
 
       {/* 4. Luxury Discovery Showcase: Full Menu, Catering & Story Teasers */}
-      <section className="py-16 bg-[#161313] border-t border-b border-mughlai-border relative overflow-hidden">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-mughlai-maroon/15 blur-3xl pointer-events-none rounded-full" />
+      <section className="py-16 bg-[#161313] border-t border-b border-mughlai-border relative overflow-hidden [isolation:isolate]">
+        <div 
+          className="absolute top-0 right-1/4 w-96 h-96 pointer-events-none rounded-full"
+          style={{ background: 'radial-gradient(circle, rgba(74, 14, 23, 0.2) 0%, transparent 70%)' }}
+        />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
           <div className="text-center max-w-2xl mx-auto mb-10">

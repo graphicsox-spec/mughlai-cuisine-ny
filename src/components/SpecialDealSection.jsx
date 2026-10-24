@@ -439,12 +439,18 @@ export default function SpecialDealSection() {
   };
 
   return (
-    <section id="special-deal" className="py-16 sm:py-20 bg-[#161313] relative overflow-hidden border-b border-mughlai-border">
+    <section id="special-deal" className="py-16 sm:py-20 bg-[#161313] relative overflow-hidden border-b border-mughlai-border [isolation:isolate]">
       <div id="deal-builder" className="absolute -top-24 pointer-events-none" />
       
-      {/* Background Ambience Glow */}
-      <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-mughlai-flame/10 blur-3xl pointer-events-none rounded-full" />
-      <div className="absolute bottom-10 left-10 w-96 h-96 bg-mughlai-maroon/20 blur-3xl pointer-events-none rounded-full" />
+      {/* Background Ambience Glow - Zero-cost Radial Gradient instead of heavy blur-3xl */}
+      <div 
+        className="absolute top-1/3 right-1/4 w-96 h-96 pointer-events-none rounded-full"
+        style={{ background: 'radial-gradient(circle, rgba(252, 75, 23, 0.12) 0%, transparent 70%)' }}
+      />
+      <div 
+        className="absolute bottom-10 left-10 w-96 h-96 pointer-events-none rounded-full"
+        style={{ background: 'radial-gradient(circle, rgba(74, 14, 23, 0.22) 0%, transparent 70%)' }}
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -834,11 +840,9 @@ export default function SpecialDealSection() {
           <div className="lg:col-span-5 relative">
             <div 
               ref={rightCardRef}
-              className="relative rounded-3xl overflow-hidden border-2 border-mughlai-gold/60 shadow-[0_8px_40px_rgba(0,0,0,0.9),0_0_30px_rgba(212,175,55,0.2)] bg-[#0F0D0D] flex flex-col justify-between"
+              className="relative rounded-3xl overflow-hidden border-2 border-mughlai-gold/60 shadow-[0_8px_40px_rgba(0,0,0,0.9),0_0_30px_rgba(212,175,55,0.2)] bg-[#0F0D0D] flex flex-col justify-between transform-gpu"
               style={{
-                height: targetHeight ? `${targetHeight}px` : undefined,
-                minHeight: targetHeight ? `${targetHeight}px` : undefined,
-                maxHeight: targetHeight ? `${targetHeight}px` : undefined,
+                minHeight: targetHeight ? `${Math.max(targetHeight, 460)}px` : '460px',
               }}
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}

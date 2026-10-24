@@ -5,10 +5,13 @@ import { BRAND_INFO } from '../data/locations';
 
 export default function StorySection({ onOpenOrderModal }) {
   return (
-    <section id="our-story" className="py-20 bg-[#161313] relative overflow-hidden border-b border-mughlai-border">
+    <section id="our-story" className="py-20 bg-[#161313] relative overflow-hidden border-b border-mughlai-border [isolation:isolate]">
       
       {/* Background Ambience */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-mughlai-maroon/20 blur-3xl pointer-events-none" />
+      <div 
+        className="absolute top-1/4 left-1/4 w-96 h-96 pointer-events-none rounded-full"
+        style={{ background: 'radial-gradient(circle, rgba(74, 14, 23, 0.22) 0%, transparent 70%)' }}
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         

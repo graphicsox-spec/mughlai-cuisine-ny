@@ -33,11 +33,17 @@ export default function LocationsHub({ selectedLocation, onSelectLocation }) {
   const activeBranch = LOCATIONS.find(loc => loc.id === activeTab) || LOCATIONS[0];
 
   return (
-    <section id="locations" className="py-20 bg-[#121212] relative border-b border-mughlai-border">
+    <section id="locations" className="py-20 bg-[#121212] relative border-b border-mughlai-border [isolation:isolate]">
       
-      {/* Background Ambience */}
-      <div className="absolute top-0 left-1/3 w-96 h-96 bg-mughlai-maroon/20 blur-3xl pointer-events-none rounded-full" />
-      <div className="absolute bottom-0 right-10 w-96 h-96 bg-mughlai-gold/10 blur-3xl pointer-events-none rounded-full" />
+      {/* Background Ambience - Zero-cost Radial Gradient */}
+      <div 
+        className="absolute top-0 left-1/3 w-96 h-96 pointer-events-none rounded-full"
+        style={{ background: 'radial-gradient(circle, rgba(74, 14, 23, 0.22) 0%, transparent 70%)' }}
+      />
+      <div 
+        className="absolute bottom-0 right-10 w-96 h-96 pointer-events-none rounded-full"
+        style={{ background: 'radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, transparent 70%)' }}
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
